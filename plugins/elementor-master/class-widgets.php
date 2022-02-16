@@ -72,6 +72,10 @@ class Widgets {
 		require_once 'widgets/soobshestvo.php';
 		require_once 'widgets/for_whom.php';
 		require_once 'widgets/sliders.php';
+
+		require_once 'widgets/banner_video.php';
+		require_once 'widgets/partner_sliders.php';
+		require_once 'widgets/post_sliders.php';
 	}
 
 	/**
@@ -92,6 +96,10 @@ class Widgets {
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Widget_Soobshestvo() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\For_Whom() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Sliders() );
+
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Banner_Video() );
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Partner_Sliders() );
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Post_Sliders() );
 	}
 
 	/**
