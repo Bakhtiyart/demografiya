@@ -1,0 +1,29 @@
+# ignore everything in the root except the "wp-content" directory.
+!wp-content/
+
+# ignore everything in the "wp-content" directory, except:
+# "mu-plugins", "plugins", "themes" directory
+
+plugins/*
+!plugins/elementor-master/
+!themes/demografik/
+
+
+backups-dup-lite/
+languages/
+uploads/
+
+
+# ignore specific themes
+themes/twenty*/
+
+# ignore node dependency directories
+node_modules/
+
+# ignore log files and databases
+*.log
+*.sql
+*.sqlite
+index.php
+bakhtiyart
+bakhtiyart.pub
