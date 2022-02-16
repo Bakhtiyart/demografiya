@@ -151,6 +151,9 @@ add_action( 'widgets_init', 'demografik_widgets_init' );
 
 require get_template_directory() . '/inc/demogrf-scripts.php';
 
+require get_template_directory() . '/inc/post-types.php';
+
+
 /**
  * Implement the Custom Header feature.
  */
