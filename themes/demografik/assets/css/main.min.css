@@ -3901,7 +3901,7 @@ a.items-center .item-title {
 
 .d_library {
     position: relative;
-    background-color: #e9f2f9;
+    background-color: transparent;
     min-height: 185px;
     padding: 4rem 0 5rem;
 }
@@ -4036,7 +4036,7 @@ main {
 }
 
 .section__bg--off-white {
-    background: #fafafa;
+    background: transparent;
     padding-top: 95px;
     padding-bottom: 85px;
 }
@@ -5171,7 +5171,7 @@ main {
 }
 
 .section__featured-projects {
-    background: #e9f2f9;
+    background: transparent;
 }
 
 .section__featured-projects+.section__featured-projects {
