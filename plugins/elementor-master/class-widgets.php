@@ -76,6 +76,7 @@ class Widgets {
 		require_once 'widgets/banner_video.php';
 		require_once 'widgets/partner_sliders.php';
 		require_once 'widgets/post_sliders.php';
+		require_once 'widgets/post_sliders_category.php';
 	}
 
 	/**
@@ -100,6 +101,7 @@ class Widgets {
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Banner_Video() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Partner_Sliders() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Post_Sliders() );
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Post_Sliders_Category() );
 	}
 
 	/**
