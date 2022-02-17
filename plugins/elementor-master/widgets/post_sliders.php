@@ -87,6 +87,7 @@ class Post_Sliders extends Widget_Base {
 
 	
 	protected function _register_controls() {
+
 		$this->start_controls_section(
 			'section_content',
 			array(
@@ -200,25 +201,28 @@ class Post_Sliders extends Widget_Base {
 		$this->add_inline_editing_attributes( 'button_name', 'none' );
 		?>
 
-		<?php
-		$options = array();
-		$posts = get_posts( array(
-			'post_type'  => 'page'
-		) );
-		foreach ( $posts as $key => $post ) {
-			$options[$post->ID] = get_the_title($post->ID);
-		}
-		?>
 
+		
 
 
 		<div class="section section__content-slider section__content-slider--pl section__content-slider--carousel section__bg--off-white">
             <div class="wrapper">
                 <h2 class="section__title font__primary--31"><?php echo wp_kses( $settings['title'], array() ); ?></h2>
                 <div class="main-carousel">
+				<?php
+				global $post;
+				$postslist = get_posts( [
+					'post_type' => 'infographics',
+					'posts_per_page' => 10,
+					'order'=> 'ASC',
+					'orderby' => 'title'
+				] );
 
+				foreach( $postslist as $post ){
+					setup_postdata($post);
+					?>
                     <div class="carousel-cell carousel-cell--resource carousel-cell--image">
-                        <a href="#" target="_blank" class="block__img">
+                        <a href="<?php the_permalink(); ?>" target="_blank" class="block__img">
                             <span class="overlay">
                                 <svg version="1.1" class="icon icon__plus" xmlns="http://www.w3.org/2000/svg"
                                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="6px" height="6px"
@@ -230,324 +234,37 @@ class Post_Sliders extends Widget_Base {
                                     </polygon>
                                 </svg>
                             </span>
-                            <img src="images/toshkent.jpg">
+                            <?php
+                            if (has_post_thumbnail() != null) {
+                                the_post_thumbnail();
+                            }else{
+                             ?>
+                             <div></div>
+                            <?php }
+                              ?>
                         </a>
                         <div class="content">
-                            <h3 class="title"><a href="#" target="_blank">Toshkent viloyati</a></h3>
+                            <h3 class="title"><a href="<?php the_permalink(); ?>" target="_blank"><?php the_title(); ?></a></h3>
+                            <?php 
+                                 if (has_post_thumbnail() == null) {?>
+                                 
+                                <?php the_excerpt(); ?>
+                            <div class="partners">
+                              <p> <?php echo get_post_meta( get_the_ID(), 'author_name', TRUE ) ?></p>
+                            </div>
+                                <?php
+                            }else{
+                             ?>
+                             <div></div>
+                            <?php } ?>
                         </div>
                     </div>
-                    <div class="carousel-cell carousel-cell--resource carousel-cell--image">
-                        <a href="#" target="_blank" class="block__img">
-                            <span class="overlay">
-                                <svg version="1.1" class="icon icon__plus" xmlns="http://www.w3.org/2000/svg"
-                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="6px" height="6px"
-                                    viewBox="0 0 6 6" style="enable-background:new 0 0 6 6;" xml:space="preserve">
-
-                                    <polygon
-                                        points="6,2.6 3.4,2.6 3.4,0 2.6,0 2.6,2.6 0,2.6 0,3.4 2.6,3.4 2.6,6 3.4,6 3.4,3.4 6,3.4 ">
-
-                                    </polygon>
-
-                                </svg>
-                            </span>
-                            <img src="images/sirdaryo.jpg">
-                        </a>
-
-                        <div class="content">
-                            <h3 class="title"><a href="#" target="_blank">Sirdaryo viloyati</a></h3>
-                        </div>
-                    </div>
-
-                    <div class="carousel-cell carousel-cell--resource carousel-cell--image">
-                        <a href="#" target="_blank" class="block__img">
-                            <span class="overlay">
-                                <svg version="1.1" class="icon icon__plus" xmlns="http://www.w3.org/2000/svg"
-                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="6px" height="6px"
-                                    viewBox="0 0 6 6" style="enable-background:new 0 0 6 6;" xml:space="preserve">
-
-                                    <polygon
-                                        points="6,2.6 3.4,2.6 3.4,0 2.6,0 2.6,2.6 0,2.6 0,3.4 2.6,3.4 2.6,6 3.4,6 3.4,3.4 6,3.4 ">
-
-                                    </polygon>
-                                </svg>
-                            </span>
-                            <img src="images/buxoro.jpg">
-                        </a>
-
-                        <div class="content">
-                            <h3 class="title"><a href="#" target="_blank">Buxoro viloyati</a></h3>
-                        </div>
-                    </div>
-
-                    <div class="carousel-cell carousel-cell--resource carousel-cell--image">
-                        <a href="#" target="_blank" class="block__img">
-                            <span class="overlay">
-                                <svg version="1.1" class="icon icon__plus" xmlns="http://www.w3.org/2000/svg"
-                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="6px" height="6px"
-                                    viewBox="0 0 6 6" style="enable-background:new 0 0 6 6;" xml:space="preserve">
-
-                                    <polygon
-                                        points="6,2.6 3.4,2.6 3.4,0 2.6,0 2.6,2.6 0,2.6 0,3.4 2.6,3.4 2.6,6 3.4,6 3.4,3.4 6,3.4 ">
-
-                                    </polygon>
-                                </svg>
-                            </span>
-                            <img src="images/jizzax.jpg">
-                        </a>
-                        <div class="content">
-                            <h3 class="title"><a href="#" target="_blank">Jizzax viloyati</a></h3>
-                        </div>
-                    </div>
-
-                    <div class="carousel-cell carousel-cell--resource carousel-cell--image">
-                        <a href="#" target="_blank" class="block__img">
-                            <span class="overlay">
-                                <svg version="1.1" class="icon icon__plus" xmlns="http://www.w3.org/2000/svg"
-                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="6px" height="6px"
-                                    viewBox="0 0 6 6" style="enable-background:new 0 0 6 6;" xml:space="preserve">
-
-                                    <polygon
-                                        points="6,2.6 3.4,2.6 3.4,0 2.6,0 2.6,2.6 0,2.6 0,3.4 2.6,3.4 2.6,6 3.4,6 3.4,3.4 6,3.4 ">
-
-                                    </polygon>
-                                </svg>
-                            </span>
-                            <img src="images/qashqadaryo.jpg">
-                        </a>
-                        <div class="content">
-                            <h3 class="title"><a href="#" target="_blank">Qashqadaryo viloyati</a></h3>
-                        </div>
-                    </div>
-                    <div class="carousel-cell carousel-cell--resource carousel-cell--image">
-                        <a href="#" target="_blank" class="block__img">
-                            <span class="overlay">
-                                <svg version="1.1" class="icon icon__plus" xmlns="http://www.w3.org/2000/svg"
-                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="6px" height="6px"
-                                    viewBox="0 0 6 6" style="enable-background:new 0 0 6 6;" xml:space="preserve">
-
-                                    <polygon
-                                        points="6,2.6 3.4,2.6 3.4,0 2.6,0 2.6,2.6 0,2.6 0,3.4 2.6,3.4 2.6,6 3.4,6 3.4,3.4 6,3.4 ">
-
-                                    </polygon>
-                                </svg>
-                            </span>
-                            <img src="images/navoiy.jpg">
-                        </a>
-                        <div class="content">
-                            <h3 class="title"><a href="#" target="_blank">Navoiy viloyati</a></h3>
-                        </div>
-                    </div>
-                    <div class="carousel-cell carousel-cell--resource carousel-cell--image">
-                        <a href="#" target="_blank" class="block__img">
-                            <span class="overlay">
-                                <svg version="1.1" class="icon icon__plus" xmlns="http://www.w3.org/2000/svg"
-                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="6px" height="6px"
-                                    viewBox="0 0 6 6" style="enable-background:new 0 0 6 6;" xml:space="preserve">
-                                    <polygon
-                                        points="6,2.6 3.4,2.6 3.4,0 2.6,0 2.6,2.6 0,2.6 0,3.4 2.6,3.4 2.6,6 3.4,6 3.4,3.4 6,3.4 ">
-
-                                    </polygon>
-                                </svg>
-                            </span>
-                            <img src="images/namangan.jpg">
-                        </a>
-
-                        <div class="content">
-
-                            <h3 class="title"><a href="#" target="_blank">Namangan viloyati</a></h3>
-
-                        </div>
-
-                    </div>
-
-                    <div class="carousel-cell carousel-cell--resource carousel-cell--image">
-
-                        <a href="#" target="_blank" class="block__img">
-
-                            <span class="overlay">
-
-                                <svg version="1.1" class="icon icon__plus" xmlns="http://www.w3.org/2000/svg"
-                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="6px" height="6px"
-                                    viewBox="0 0 6 6" style="enable-background:new 0 0 6 6;" xml:space="preserve">
-
-                                    <polygon
-                                        points="6,2.6 3.4,2.6 3.4,0 2.6,0 2.6,2.6 0,2.6 0,3.4 2.6,3.4 2.6,6 3.4,6 3.4,3.4 6,3.4 ">
-
-                                    </polygon>
-
-                                </svg>
-
-                            </span>
-
-                            <img src="images/samarqand.jpg">
-
-                        </a>
-
-                        <div class="content">
-
-                            <h3 class="title"><a href="#" target="_blank">Samarqand viloyati</a></h3>
-
-                        </div>
-
-                    </div>
-
-                    <div class="carousel-cell carousel-cell--resource carousel-cell--image">
-
-                        <a href="#" target="_blank" class="block__img">
-
-                            <span class="overlay">
-
-                                <svg version="1.1" class="icon icon__plus" xmlns="http://www.w3.org/2000/svg"
-                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="6px" height="6px"
-                                    viewBox="0 0 6 6" style="enable-background:new 0 0 6 6;" xml:space="preserve">
-
-                                    <polygon
-                                        points="6,2.6 3.4,2.6 3.4,0 2.6,0 2.6,2.6 0,2.6 0,3.4 2.6,3.4 2.6,6 3.4,6 3.4,3.4 6,3.4 ">
-
-                                    </polygon>
-
-                                </svg>
-
-                            </span>
-
-                            <img src="images/surxondaryo.jpg">
-
-                        </a>
-
-                        <div class="content">
-
-                            <h3 class="title"><a href="#" target="_blank">Surxondaryo viloyati</a></h3>
-
-                        </div>
-
-                    </div>
-
-                    <div class="carousel-cell carousel-cell--resource carousel-cell--image">
-
-                        <a href="#" target="_blank" class="block__img">
-
-                            <span class="overlay">
-
-                                <svg version="1.1" class="icon icon__plus" xmlns="http://www.w3.org/2000/svg"
-                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="6px" height="6px"
-                                    viewBox="0 0 6 6" style="enable-background:new 0 0 6 6;" xml:space="preserve">
-
-                                    <polygon
-                                        points="6,2.6 3.4,2.6 3.4,0 2.6,0 2.6,2.6 0,2.6 0,3.4 2.6,3.4 2.6,6 3.4,6 3.4,3.4 6,3.4 ">
-
-                                    </polygon>
-
-                                </svg>
-
-                            </span>
-
-                            <img src="images/andijon.jpg">
-
-                        </a>
-
-                        <div class="content">
-
-                            <h3 class="title"><a href="#" target="_blank">Andijon viloyati</a></h3>
-
-                        </div>
-
-                    </div>
-
-                    <div class="carousel-cell carousel-cell--resource carousel-cell--image">
-
-                        <a href="#" target="_blank" class="block__img">
-
-                            <span class="overlay">
-
-                                <svg version="1.1" class="icon icon__plus" xmlns="http://www.w3.org/2000/svg"
-                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="6px" height="6px"
-                                    viewBox="0 0 6 6" style="enable-background:new 0 0 6 6;" xml:space="preserve">
-
-                                    <polygon
-                                        points="6,2.6 3.4,2.6 3.4,0 2.6,0 2.6,2.6 0,2.6 0,3.4 2.6,3.4 2.6,6 3.4,6 3.4,3.4 6,3.4 ">
-
-                                    </polygon>
-
-                                </svg>
-
-                            </span>
-
-                            <img src="images/fargona.jpg">
-
-                        </a>
-
-                        <div class="content">
-
-                            <h3 class="title"><a href="#" target="_blank">Farg'ona viloyati</a></h3>
-
-                        </div>
-
-                    </div>
-
-                    <div class="carousel-cell carousel-cell--resource carousel-cell--image">
-
-                        <a href="#" target="_blank" class="block__img">
-
-                            <span class="overlay">
-
-                                <svg version="1.1" class="icon icon__plus" xmlns="http://www.w3.org/2000/svg"
-                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="6px" height="6px"
-                                    viewBox="0 0 6 6" style="enable-background:new 0 0 6 6;" xml:space="preserve">
-
-                                    <polygon
-                                        points="6,2.6 3.4,2.6 3.4,0 2.6,0 2.6,2.6 0,2.6 0,3.4 2.6,3.4 2.6,6 3.4,6 3.4,3.4 6,3.4 ">
-
-                                    </polygon>
-
-                                </svg>
-
-                            </span>
-
-                            <img src="images/xorazm.jpg">
-
-                        </a>
-
-                        <div class="content">
-
-                            <h3 class="title"><a href="#" target="_blank">Xorazm viloyati</a></h3>
-
-                        </div>
-
-                    </div>
-
-                    <div class="carousel-cell carousel-cell--resource carousel-cell--image">
-
-                        <a href="#" target="_blank" class="block__img">
-
-                            <span class="overlay">
-
-                                <svg version="1.1" class="icon icon__plus" xmlns="http://www.w3.org/2000/svg"
-                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="6px" height="6px"
-                                    viewBox="0 0 6 6" style="enable-background:new 0 0 6 6;" xml:space="preserve">
-
-                                    <polygon
-                                        points="6,2.6 3.4,2.6 3.4,0 2.6,0 2.6,2.6 0,2.6 0,3.4 2.6,3.4 2.6,6 3.4,6 3.4,3.4 6,3.4 ">
-
-                                    </polygon>
-
-                                </svg>
-
-                            </span>
-
-                            <img src="images/qoraqolpogiston.jpg">
-
-                        </a>
-
-                        <div class="content">
-
-                            <h3 class="title"><a href="#" target="_blank">Qoraqalpog'iston Respublikasi</a></h3>
-
-                        </div>
-
-                    </div>
-
-
-
+					<?php
+				}
+
+				wp_reset_postdata();
+				?>
+                    
                 </div>
 
                 <a href="<?php echo $settings['button_link']['url'] ?>" class="btn btn__page btn__primary "><?php echo wp_kses( $settings['button_name'], array() ); ?>
@@ -622,7 +339,8 @@ class Post_Sliders extends Widget_Base {
 
             </div>
 
-        </div>		
+        </div>	
+		
 		
 		<?php
 	}

@@ -78,7 +78,7 @@ class postAuthorClass {
  
         if ( in_array( $post_type, $post_types ) ) {
             add_meta_box(
-                'some_meta_box_name',
+                'author_name',
                 __( 'Post author name', 'demografik' ),
                 array( $this, 'render_meta_box_content' ),
                 $post_type,
