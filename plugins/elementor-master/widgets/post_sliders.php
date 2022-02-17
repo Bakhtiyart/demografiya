@@ -95,6 +95,35 @@ class Post_Sliders extends Widget_Base {
 			)
 		);
 
+        $this->add_control(
+			'style',
+			[
+				'label' => esc_html__( 'Style', 'elementor-master' ),
+				'type' => \Elementor\Controls_Manager::SELECT,
+				'default' => 'solid',
+				'options' => [
+					'first' => esc_html__( 'Style 1', 'elementor-master' ),
+					'second'  => esc_html__( 'Style 2', 'elementor-master' ),
+				],
+			]
+		);
+        
+        $this->add_control(
+			'post_type',
+			[
+				'label' => esc_html__( 'Post type', 'elementor-master' ),
+				'type' => \Elementor\Controls_Manager::SELECT,
+				'default' => 'solid',
+				'options' => [
+					'post' => esc_html__( 'Blog', 'elementor-master' ),
+					'infographics'  => esc_html__( 'Infographics', 'elementor-master' ),
+					'page' => esc_html__( 'Page', 'elementor-master' ),
+					'dotted' => esc_html__( 'Dotted', 'elementor-master' ),
+					'double' => esc_html__( 'Double', 'elementor-master' ),
+				],
+			]
+		);
+
 		$this->add_control(
 			'title',
 			array(
@@ -126,62 +155,6 @@ class Post_Sliders extends Widget_Base {
 			]
 		);
 
-	
-
-		$repeater = new \Elementor\Repeater();
-
-		$repeater->add_control(
-			'title', [
-				'label' => __( 'Title', 'elementor-awesomesauce' ),
-				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => __( 'List Title' , 'elementor-awesomesauce' ),
-				'label_block' => true,
-			]
-		);
-
-		$repeater->add_control(
-			'link',
-			[
-				'label' => esc_html__( 'Link', 'plugin-name' ),
-				'type' => \Elementor\Controls_Manager::URL,
-				'placeholder' => esc_html__( 'https://your-link.com', 'plugin-name' ),
-				'default' => [
-					'url' => '',
-					'is_external' => true,
-					'nofollow' => true,
-					'custom_attributes' => '',
-				],
-			]
-		);
-
-		$repeater->add_control(
-			'image',
-			[
-				'label' => esc_html__( 'Choose Image', 'plugin-name' ),
-				'type' => \Elementor\Controls_Manager::MEDIA,
-				'default' => [
-					'url' => \Elementor\Utils::get_placeholder_image_src(),
-				],
-			]
-		);
-
-	
-
-		$this->add_control(
-			'list',
-			[
-				'label' => __( 'Repeater List', 'elementor-awesomesauce' ),
-				'type' => \Elementor\Controls_Manager::REPEATER,
-				'fields' => $repeater->get_controls(),
-				'default' => [
-					[
-						'list_title' => __( 'Title #1', 'elementor-awesomesauce' ),
-					],
-					
-				],
-				'title_field' => '{{{ list_title }}}',
-			]
-		);
 
 		$this->end_controls_section();
 	}
@@ -201,23 +174,25 @@ class Post_Sliders extends Widget_Base {
 		$this->add_inline_editing_attributes( 'button_name', 'none' );
 		?>
 
-
+        <?php
+          	global $post;
+			$postslist = get_posts( [
+				'post_type' => esc_attr( $settings['post_type'] ),
+				'posts_per_page' => 10,
+				'order'=> 'ASC',
+				'orderby' => 'title'
+			] ); 
+        ?>
 		
 
 
-		<div class="section section__content-slider section__content-slider--pl section__content-slider--carousel section__bg--off-white">
+		<?php 
+        if (esc_attr($settings['style'] == 'first')) { ?>
+            <div class="section section__content-slider section__content-slider--pl section__content-slider--carousel section__bg--off-white">
             <div class="wrapper">
                 <h2 class="section__title font__primary--31"><?php echo wp_kses( $settings['title'], array() ); ?></h2>
                 <div class="main-carousel">
 				<?php
-				global $post;
-				$postslist = get_posts( [
-					'post_type' => 'infographics',
-					'posts_per_page' => 10,
-					'order'=> 'ASC',
-					'orderby' => 'title'
-				] );
-
 				foreach( $postslist as $post ){
 					setup_postdata($post);
 					?>
@@ -250,7 +225,7 @@ class Post_Sliders extends Widget_Base {
                                  
                                 <?php the_excerpt(); ?>
                             <div class="partners">
-                              <p> <?php echo get_post_meta( get_the_ID(), 'author_name', TRUE ) ?></p>
+                              <p> <?php echo get_post_meta(get_the_ID(), '_my_meta_value_key', TRUE ) ?></p>
                             </div>
                                 <?php
                             }else{
@@ -285,61 +260,51 @@ class Post_Sliders extends Widget_Base {
             </div>
 
         </div>
+        <?php }else{ ?>
+             <div class="notsection section__content-slider nopade">
 
+            <div class="d_library">
 
+                <div class="nopade">
 
-		<div class="notsection section__content-slider nopade">
-
-            <div class="my_slide ">
-
-                <div class="wrapper">
-
-                    <h2 class="section__title font__primary--31"><?php echo wp_kses( $settings['title'], array() ); ?></h2>
+                    <h2 class="section__title nopade font__primary--31 text-center"><?php echo wp_kses( $settings['title'], array() ); ?></h2>
 
                     <div class="touch_slider">
 
-                        <div id="owl-demo" class="owl-carousel">
+                        <div id="d-library" class="owl-carousel">
+                            <?php
+				foreach( $postslist as $post ){
+					setup_postdata($post);
+					?>
+                    <div>
 
-                           <?php 
-							if ( $settings['list'] ) {
-								
-								foreach (  $settings['list'] as $item ) { ?>
-								<a href="<?php echo $item['link']['url'];?>" class="item nopade relative" target="_blank">
+                                <a href="e_permalink(); ?>" class="items-center w-full h-auto flex flex-col py-8 px-2 text-center ">
 
-									<div class="img_class"><img src="<?php echo $item['image']['url'];?>"></div><span class="slide_text"><?php echo $item['title'];?></span>
+                                    <img src="<?php the_post_thumbnail_url() ?>" class="zoomable block mx-auto">
 
-                           		 </a>
-								<?php }
-							
-							}			
-							?>	
+                                    <p class="item-title"><?php the_title(); ?></p>
 
+                                </a>
 
+                            </div>
+                    
+					<?php
+				}
 
+				wp_reset_postdata();
+				?>
+
+                            
                         </div>
-
                     </div>
-
-                    <a href="<?php echo $settings['button_link']['url'] ?>" class="btn btn__page btn__primary"><?php echo wp_kses( $settings['button_name'], array() ); ?>
-
-                        <svg version="1.1" class="icon icon__arrow" xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="12.9px" height="10.4px"
-                            viewBox="0 0 12.9 10.4" style="enable-background:new 0 0 12.9 10.4;" xml:space="preserve">
-
-                            <path class="st0"
-                                d="M12.6,4.7L7.8,0l-1,1.1l3.5,3.4H0V6h10.2L6.7,9.4l1,1.1l4.8-4.7c0.1-0.1,0.2-0.3,0.2-0.5S12.8,4.8,12.6,4.7z">
-
-                            </path>
-
-                        </svg>
-
-                    </a>
-
                 </div>
-
             </div>
+        </div>
+       <?php }?>
 
-        </div>	
+
+
+		
 		
 		
 		<?php
