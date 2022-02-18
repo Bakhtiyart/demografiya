@@ -9,12 +9,14 @@
 
 get_header();
 ?>
-
-	<main id="primary" class="site-main">
+ <img src="<?php echo get_template_directory_uri() ?>/assets/images/image-header.png">
+ <div class="wrapper-blog">
+ 
+ <div class="site-main">
 
 		<?php if ( have_posts() ) : ?>
 
-			<header class="page-header">
+<header class="page-header"> 
 				<?php
 				the_archive_title( '<h1 class="page-title">', '</h1>' );
 				the_archive_description( '<div class="archive-description">', '</div>' );
@@ -37,15 +39,15 @@ get_header();
 
 			the_posts_navigation();
 
-		else :
+		else:
 
 			get_template_part( 'template-parts/content', 'none' );
 
 		endif;
 		?>
 
-	</main><!-- #main -->
+	</div>
 
-<?php
-get_sidebar();
+  <?php  get_sidebar();  ?>
+</div>
 get_footer();

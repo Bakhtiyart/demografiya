@@ -22,7 +22,7 @@
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-<header class="section section__header">
+  <header class="section section__header">
         <div class="header--top">
             <div class="wrapper">
 
