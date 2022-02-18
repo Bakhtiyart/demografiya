@@ -27,3 +27,13 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   display: flex;
   justify-content: space-around;
 }
+.archive .section.section__header:before {
+  background: rgb(4 8 21 / 67%);
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

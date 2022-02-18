@@ -132,49 +132,23 @@
 
                     </button>
 
-                    <ul id="menu-primary-navigation" class="nav nav-pills">
-
-                        <li class="menu-projects"><a href="#">Demografik passport</a></li>
-                        <li class="menu-projects"><a href="#">Interaktiv xarita</a></li>
-                        <li class="menu-projects dropdown">
-
-                            <a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="#" aria-expanded="false">Raqamli kutubxona</a>
-
-                            <ul class="dropdown-menu dropdown-menu__primary">
-                                <li id="menu-item-182" class="dropdown menu-about">
-                                    <ul class="dropdown-menu dropdown-menu__secondary">
-                                        <li class="menu-media-center"><a href="#">Raqamli kutubxona</a></li>
-                                        <li class="menu-media-center"><a href="#">Xalqaro demografiya jurnali</a></li>
-                                    </ul>
-
-                                </li>
-
-                            </ul>
-
-                        </li>
-                        <li class="menu-projects"><a href="#">Infografik materiallar</a></li>
-                        <li class="menu-projects"><a href="#">Onlayn kurslar</a></li>
-                        <li class="dropdown menu-about">
-                            <a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="#" aria-expanded="false">Biz haqimizda</a>
-
-                            <ul class="dropdown-menu dropdown-menu__primary">
-                                <li id="menu-item-182" class="dropdown menu-about">
-                                    <ul class="dropdown-menu dropdown-menu__secondary">
-                                        <li class="menu-media-center"><a href="#">Demografiya haqida</a></li>
-                                        <li class="menu-media-center"><a href="#">Hamkorlik aloqalari</a></li>
-                                        <li class="menu-contact-prb"><a href="#">Biz bilan bog'lanish</a></li>
-                                    </ul>
-
-                                </li>
-
-                            </ul>
-
-                        </li>
-
-
-
-                    </ul>
-
+                    <?php 
+                       wp_nav_menu( [
+                        'theme_location'  => 'menu-1',
+                        'menu'            => '',
+                        'container'       => false,
+                        'menu_class'      => 'nav nav-pills',
+                        'menu_id'         => 'menu-primary-navigation',
+                        'fallback_cb'     => 'wp_page_menu',
+                        'before'          => '',
+                        'after'           => '',
+                        'link_before'     => '',
+                        'link_after'      => '',
+                        'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                        'depth'           => 0,
+                        'walker'          => new BEM_Walker_Nav_Menu(),
+                    ] );
+                    ?>
                 </nav>
 
             </div>

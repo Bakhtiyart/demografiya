@@ -153,6 +153,7 @@ require get_template_directory() . '/inc/demogrf-scripts.php';
 
 require get_template_directory() . '/inc/post-types.php';
 
+require get_template_directory() . '/inc/BEM_Walker_Nav_Menu.php';
 
 /**
  * Implement the Custom Header feature.
