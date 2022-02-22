@@ -134,6 +134,11 @@ function demografik_widgets_init() {
 }
 add_action( 'widgets_init', 'demografik_widgets_init' );
 
+function all_media() { 
+  get_template_part( './template-parts/all_media' );
+}
+add_shortcode('infographics', 'all_media');
+
 // /**
 //  * Enqueue scripts and styles.
 //  */

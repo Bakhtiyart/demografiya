@@ -159,6 +159,7 @@ class Post_Sliders_Category extends Widget_Base {
 		?>
 
         <?php
+			
             $categories = get_categories( [
             'taxonomy'     => 'demografik-category',
             'type'         => 'demografik-pasport',
@@ -171,7 +172,7 @@ class Post_Sliders_Category extends Widget_Base {
         ] );
 
         ?>
-
+		
         
         <div class="section section__content-slider section__content-slider--pl section__content-slider--carousel section__bg--off-white">
             <div class="wrapper">
