@@ -134,10 +134,15 @@ function demografik_widgets_init() {
 }
 add_action( 'widgets_init', 'demografik_widgets_init' );
 
-function all_media() { 
-  get_template_part( './template-parts/all_media' );
+function image() { 
+  get_template_part( './template-parts/image' );
 }
-add_shortcode('infographics', 'all_media');
+add_shortcode('image', 'image');
+
+function infographics() { 
+  get_template_part( './template-parts/infographics' );
+}
+add_shortcode('infographics', 'infographics');
 
 // /**
 //  * Enqueue scripts and styles.
