@@ -159,11 +159,13 @@ add_shortcode('infographics', 'infographics');
 // }
 // add_action( 'wp_enqueue_scripts', 'demografik_scripts' );
 
+require get_template_directory() . '/inc/BEM_Walker_Nav_Menu.php';
+
 require get_template_directory() . '/inc/demogrf-scripts.php';
 
 require get_template_directory() . '/inc/post-types.php';
 
-require get_template_directory() . '/inc/BEM_Walker_Nav_Menu.php';
+
 
 /**
  * Implement the Custom Header feature.
