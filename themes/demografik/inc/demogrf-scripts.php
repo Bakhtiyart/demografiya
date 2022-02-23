@@ -13,7 +13,7 @@ function demografik_scripts() {
     wp_enqueue_style( 'main', get_template_directory_uri() . '/assets/css/main.min.css', array(), _S_VERSION );
     wp_enqueue_style( 'redisgn', 'https://aral.mptf.uz/css/redesign.css', array(), _S_VERSION );
     wp_enqueue_style( 'redisgn2', 'https://aral.mptf.uz/css/redesign2.css', array(), _S_VERSION );
-    wp_enqueue_style( 'redisgn2', 'https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css', array(), _S_VERSION );
+    wp_enqueue_style( 'ekko-lightbox', 'https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css', array(), _S_VERSION );
 	wp_enqueue_style( 'demografik-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'demografik-style', 'rtl', 'replace' );
 
