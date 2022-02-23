@@ -62,7 +62,7 @@
 							?>
 										<div>
 											<div class="video-21-9-rate-wrapepr img_url ">
-												<a class="href_img" href="<?php echo get_the_post_thumbnail_url(); ?>" data-gallery="ig" data-toggle="lightbox">
+												<a class="href_img" href="<?php echo get_the_post_thumbnail_url(); ?>" data-gallery="ig" data-toggle="lightbox" data-target=".bd-example-modal-lg">
 													<img src="<?php echo the_post_thumbnail_url() ?>" class="video-21-9-rate-images">									
 												</a>
 											</div>
@@ -99,7 +99,7 @@
 							?>
 										<div>
 											<div class="video-21-9-rate-wrapepr img_url ">
-												<a class="href_img" href="<?php echo get_the_post_thumbnail_url(); ?>" data-target="#exampleModal" data-gallery="ig" data-toggle="lightbox">
+												<a class="href_img" href="<?php echo get_the_post_thumbnail_url(); ?>" data-gallery="ig" data-toggle="lightbox" data-target=".bd-example-modal-lg">
 													<img src="<?php echo the_post_thumbnail_url() ?>" class="video-21-9-rate-images">									
 												</a>
 											</div>
@@ -116,11 +116,15 @@
 		</div>
 		
     </div>
+
+	
 	<script>
 			//  Lighbox
 			jQuery(document).on('click', '[data-toggle="lightbox"]', function (event) {
 				event.preventDefault();
-				jQuery(this).ekkoLightbox();
+				jQuery(this).ekkoLightbox(
+					{alwaysShowClose: true},
+				);
 			});
 						
 		</script>			
