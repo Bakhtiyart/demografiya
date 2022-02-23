@@ -21,9 +21,11 @@
 	<?php wp_head(); ?>
 </head>
 
+<?php $image_url = get_the_post_thumbnail_url() ?>
+
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-  <header class="section section__header">
+  <header class="section section__header" style="background-image: url(<?php echo $image_url ? $image_url : ''  ?>)">
         <div class="header--top">
             <div class="wrapper">
 
