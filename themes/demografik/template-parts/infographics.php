@@ -187,7 +187,7 @@ foreach( $postslistvideo as $post ){
 							</a>
 						</div>
 					</div>
-					<!-- <div class="modal fade" id="<?php the_ID() ?>" tabindex="-1" role="dialog" aria-hidden="true">
+					<div class="modal fade" id="<?php the_ID() ?>" tabindex="-1" role="dialog" aria-hidden="true">
 						<div class="modal-dialog" role="document">
 							<div class="modal-content">
 
@@ -202,7 +202,7 @@ foreach( $postslistvideo as $post ){
 
 							</div>
 						</div>
-					</div> -->
+					</div>
 
 					<?php
 								}
