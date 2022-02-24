@@ -84,3 +84,10 @@ function uzbekistan(year, month, date, hours, minutes, seconds) {
 }
 window.onload = maind
 
+//  Lighbox
+jQuery(document).on('click', '[data-toggle="lightbox"]', function (event) {
+	event.preventDefault();
+	jQuery(this).ekkoLightbox({
+		alwaysShowClose: true
+	}, );
+});

@@ -217,13 +217,5 @@ foreach( $postslistvideo as $post ){
 	</div>
 
 
-	<script>
-		//  Lighbox
-		jQuery(document).on('click', '[data-toggle="lightbox"]', function (event) {
-			event.preventDefault();
-			jQuery(this).ekkoLightbox({
-				alwaysShowClose: true
-			}, );
-		});
-	</script>
+	
 </section>
