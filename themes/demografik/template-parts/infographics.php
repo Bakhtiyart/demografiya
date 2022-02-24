@@ -50,15 +50,15 @@ foreach( $postslistvideo as $post ){
 <section class="grey-bg-section">
 	<div class="tabs-wrapper">
 		<div data-admiral-tabs=".tabs-content" class="media-page-tabs">
-			<div data-hash="tab_images" class="admiral-active">
+			<div data-hash="tab_infographics" class="admiral-active">
 				<div class="tab-title">Infografika</div>
 				<div class="tab-new-label"><?php echo $countinfografika; ?></div>
 			</div>
-			<div data-hash="tab_videos">
+			<div data-hash="tab_images">
 				<div class="tab-title">Rasm</div>
 				<div class="tab-new-label"><?php echo $countrasm; ?></div>
 			</div>
-			<div data-hash="tab_infographics">
+			<div data-hash="tab_video">
 				<div class="tab-title">Video</div>
 				<div class="tab-new-label"><?php echo $countvideo; ?></div>
 			</div>
