@@ -32136,3 +32136,12 @@ ul#menu-primary-navigation li a {
 .underline-text::after {
     color: #ff9800;
 }
+
+li a i::before {
+    font-size: 16px !important;
+}
+
+li a i {
+    padding: 0 !important;
+    margin: 0 !important;
+}

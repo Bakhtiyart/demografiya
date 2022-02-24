@@ -11,9 +11,9 @@ function demografik_scripts() {
     wp_enqueue_style( 'owl-carousel', get_template_directory_uri() . '/assets/css/owl.carousel.css', array(), _S_VERSION );
     wp_enqueue_style( 'flickity', get_template_directory_uri() . '/assets/css/flickity.css', array(), _S_VERSION );
     wp_enqueue_style( 'main', get_template_directory_uri() . '/assets/css/main.min.css', array(), _S_VERSION );
-    wp_enqueue_style( 'redisgn', 'https://aral.mptf.uz/css/redesign.css', array(), _S_VERSION );
-    wp_enqueue_style( 'redisgn2', 'https://aral.mptf.uz/css/redesign2.css', array(), _S_VERSION );
-    wp_enqueue_style( 'ekko-lightbox', 'https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css', array(), _S_VERSION );
+    wp_enqueue_style( 'redisgn', get_template_directory_uri() . '/assets/css/redesign.css', array(), _S_VERSION );
+    wp_enqueue_style( 'redisgn2', get_template_directory_uri() . '/assets/css/redesign2.css', array(), _S_VERSION );
+    wp_enqueue_style( 'ekko-lightbox', get_template_directory_uri() . '/assets/css/ekko-lightbox.css', array(), _S_VERSION );
 	wp_enqueue_style( 'demografik-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'demografik-style', 'rtl', 'replace' );
 
@@ -25,8 +25,8 @@ function demografik_scripts() {
     wp_enqueue_script( 'main', get_template_directory_uri() . '/assets/js/main.min.js', array(), _S_VERSION, true );
     wp_enqueue_script( 'demografik', get_template_directory_uri() . '/assets/js/demografik.js', array(), _S_VERSION, true );
     wp_enqueue_script( 'demografik-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
-    wp_enqueue_script( 'ekko-lightbox', 'https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js', array(), _S_VERSION, true );
-    wp_enqueue_script( 'admiral', 'https://aral.mptf.uz/js/admiral-tabs.js', array(), _S_VERSION, true );
+    wp_enqueue_script( 'ekko-lightbox', get_template_directory_uri() . '/assets/js/ekko-lightbox.min.js', array(), _S_VERSION, true );
+    wp_enqueue_script( 'admiral', get_template_directory_uri() . '/assets/js/admiral-tabs.js', array(), _S_VERSION, true );
 
     
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
