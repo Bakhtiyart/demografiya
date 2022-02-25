@@ -285,15 +285,32 @@ table {
     color: #fff;
 }
 
+
 nav .nav .open>a,
 nav .nav .open>a,
 nav .nav .open>a:focus,
 nav .nav .open>a:hover {
     background-color: transparent;
 }
+.stm_titlebox{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    text-align: center;
+    background-size: cover !important;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(45deg, #003BB3 0%, #8BC34A 100%);
+}
+
+.stm_titlebox__title.h1 {
+    font-size: 64px;
+    line-height: 56px;
+    color: #fff;
+    margin: 0;
+}
 
 nav.nav-main ul.dropdown-menu a {
     color: #000;
+    cursor: pointer;
 }
 
 
@@ -16272,11 +16289,6 @@ nav .nav .open>a:hover {
     background-color: transparent;
 }
 
-nav.nav-main ul.dropdown-menu a {
-    color: #000;
-}
-
-
 /* End Header */
 
 .font__primary--16,
@@ -18222,6 +18234,7 @@ a.back_project_footer svg.icon.icon__arrow.rotate_90 {
 .nav-main .dropdown-toggle {
     position: relative;
     padding-right: 18px;
+    cursor: pointer;
 }
 
 .nav-main .dropdown-toggle:after {
@@ -18662,19 +18675,16 @@ h1 {
     line-height: 35px;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
     color: #555;
     margin-top: 5px;
     text-shadow: none;
     font-weight: 700;
     font-family: Roboto Condensed, sans-serif;
 }
-
+.ekko-lightbox .modal-body{
+    padding: 0;
+}
 @media (min-width: 320px) {
     .nav-main li:last-child {
         padding-right: 30px;
@@ -18692,11 +18702,6 @@ h6 {
         display: inline-block;
         width: 100%;
     }
-
-    .nav-main a:hover {
-        color: #fff;
-    }
-
     .nav-main .dropdown-toggle {
         padding-right: 30px;
     }
@@ -19153,7 +19158,15 @@ h6 {
         padding: 0px;
         display: inline-block;
         width: auto;
-        color: #fff;
+        color: #000;
+    }
+ 
+    .home nav.nav-main li a{
+        color: #fff; 
+    }
+
+    nav.nav-main ul.nav__sub-menu--level-1 li a, .home nav.nav-main ul.nav__sub-menu--level-1 li.nav__item a{
+        color: #000;
     }
 
     .nav-main .dropdown-toggle {
@@ -20029,7 +20042,7 @@ footer h4 {
 
 @media (min-width: 1440px) {
     .section__footer .wrapper {
-        width: 1340px;
+        width: 1175px;
     }
 
     .footer__top .col:first-child {
@@ -32111,10 +32124,8 @@ header {
 
 .header--bottom {
     background-color: #fff;
-}
-
-ul#menu-primary-navigation li a {
-    color: #000;
+	-webkit-box-shadow: 0 10px 20px -5px rgb(0 0 0 / 29%);
+    box-shadow: 0 10px 20px -5px rgb(0 0 0 / 29%);
 }
 
 .home .section__header {
@@ -32125,9 +32136,6 @@ ul#menu-primary-navigation li a {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-.home ul#menu-primary-navigation li a {
-    color: #fff;
-}
 
 .common-heading {
     color: #003bb3;

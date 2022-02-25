@@ -66,7 +66,7 @@ foreach( $postslistvideo as $post ){
 	</div>
 </section>
 <section class="content-section" style="padding-top: 0;">
-	<div class="content-container">
+	<div class="container">
 		<div class="tabs-content">
 			<div class="admiral-active">
 				<div class="header-with-lines">

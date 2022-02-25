@@ -1,5 +1,5 @@
 body {
-    font-family: "Roboto";
+    font-family: "Roboto Condensed";
 }
 
 .custom-grid-1-4,
@@ -31,7 +31,7 @@ body {
     height: 400px;
     position: relative;
     overflow: hidden;
-    font-family: Roboto;
+    font-family: Roboto Condensed;
 }
 
 .project-item .item-gb-image {
@@ -180,7 +180,7 @@ body {
 }
 
 .description-container {
-    font-family: Roboto;
+    font-family: Roboto Condensed;
     background: #FFFFFF;
     border-radius: 4px;
     display: flex;
@@ -510,7 +510,6 @@ header {
 }
 
 .grey-bg-section {
-    padding: 75px 90px 0px;
     background-color: #F7FBFF;
 }
 
@@ -632,8 +631,6 @@ header {
 }
 
 .media-page-tabs .tab-title {
-    font-size: 14px;
-    line-height: 16px;
     padding-right: 4px;
 }
 
@@ -918,7 +915,7 @@ header {
 }
 
 .form-check .form-check-label {
-    font-family: 'Roboto';
+    font-family: 'Roboto Condensed';
     font-weight: 400;
     font-size: 14px;
     line-height: normal;

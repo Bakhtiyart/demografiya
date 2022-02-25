@@ -13,7 +13,7 @@ img {
 }
 
 .common-heading {
-    font-family: 'Roboto';
+    font-family: 'Roboto Condensed';
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
@@ -24,7 +24,7 @@ img {
 }
 
 .common-text {
-    font-family: 'Roboto';
+    font-family: 'Roboto Condensed';
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -156,7 +156,7 @@ img {
 }
 
 .nav .nav-pills {
-    font-family: 'Roboto';
+    font-family: 'Roboto Condensed';
     padding-left: 0;
     padding-right: 0;
 }
@@ -245,7 +245,7 @@ img {
 .blockFooter-bottom-text {
     width: 60%;
     text-align: center;
-    font-family: 'Roboto';
+    font-family: 'Roboto Condensed';
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -255,7 +255,7 @@ img {
 }
 
 .wrapper .content .blockFooter .blockFooter-bottom .blockFooter-bottom-company {
-    font-family: 'Roboto';
+    font-family: 'Roboto Condensed';
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -332,7 +332,7 @@ li a i::before {
 }
 
 .main-title {
-    font-family: 'Roboto';
+    font-family: 'Roboto Condensed';
     font-style: normal;
     font-weight: 700;
     font-size: 46px;
@@ -365,7 +365,7 @@ li a i::before {
 .more-btn a {
     padding: 10px 18px;
     background-color: #fff;
-    font-family: 'Roboto';
+    font-family: 'Roboto Condensed';
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
@@ -398,7 +398,7 @@ li a i::before {
 }
 
 .history-section p {
-    font-family: 'Roboto';
+    font-family: 'Roboto Condensed';
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -462,7 +462,7 @@ li a i::before {
     background-color: #FBC230;
     border-radius: 100px;
     color: #fff;
-    font-family: 'Roboto';
+    font-family: 'Roboto Condensed';
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
@@ -472,7 +472,7 @@ li a i::before {
 }
 
 .carousel-card h3 {
-    font-family: 'Roboto';
+    font-family: 'Roboto Condensed';
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
@@ -484,7 +484,7 @@ li a i::before {
 
 .carousel-card p {
     padding-top: 11px;
-    font-family: 'Roboto';
+    font-family: 'Roboto Condensed';
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -565,7 +565,7 @@ li a i::before {
 }
 
 .status-item p {
-    font-family: 'Roboto';
+    font-family: 'Roboto Condensed';
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
@@ -757,7 +757,7 @@ li a i::before {
 }
 
 .contact-data a {
-    font-family: 'Roboto';
+    font-family: 'Roboto Condensed';
     font-weight: 400;
     font-size: 16px;
     line-height: 26px;
@@ -795,7 +795,7 @@ li a i::before {
 }
 
 .form-container form label {
-    font-family: 'Roboto';
+    font-family: 'Roboto Condensed';
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
@@ -825,7 +825,7 @@ li a i::before {
     border-radius: 5px;
     border: none;
     padding: 12px 20px;
-    font-family: 'Roboto';
+    font-family: 'Roboto Condensed';
     font-style: normal;
     font-weight: bold;
     font-size: 18px;
@@ -1018,7 +1018,7 @@ li a i::before {
     border: none;
     background: #009EDB;
     border-radius: 5px;
-    font-family: 'Roboto';
+    font-family: 'Roboto Condensed';
     font-style: normal;
     font-weight: bold;
     font-size: 18px;
@@ -1242,7 +1242,7 @@ li a i::before {
 }
 
 .percent_text {
-    font-family: Roboto;
+    font-family: Roboto Condensed;
     position: absolute;
     font-size: 64px;
     font-weight: bold;
@@ -1388,7 +1388,7 @@ li a i::before {
 
 
 .outputs-block-info-one {
-    font-family: Roboto;
+    font-family: Roboto Condensed;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -1408,7 +1408,7 @@ li a i::before {
 }
 
 .outputs-block-flex div {
-    font-family: Roboto;
+    font-family: Roboto Condensed;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
@@ -1422,7 +1422,7 @@ li a i::before {
 }
 
 .outputs-block-info-two-text-one {
-    font-family: Roboto;
+    font-family: Roboto Condensed;
     font-weight: 500;
     font-size: 16px;
     line-height: 160%;
@@ -1434,7 +1434,7 @@ li a i::before {
 
 
 .outputs-block-info-two-text-two {
-    font-family: Roboto;
+    font-family: Roboto Condensed;
     font-weight: 500;
     font-size: 16px;
     line-height: 160%;
@@ -1446,7 +1446,7 @@ li a i::before {
 
 
 .outputs-block-info-two-text-three {
-    font-family: Roboto;
+    font-family: Roboto Condensed;
     font-weight: 500;
     font-size: 16px;
     line-height: 160%;
@@ -1612,7 +1612,7 @@ li a i::before {
 }
 
 .partner-with-us-title h2 {
-    font-family: 'Roboto';
+    font-family: 'Roboto Condensed';
     font-style: normal;
     font-weight: bold;
     font-size: 32px;
@@ -1654,7 +1654,7 @@ li a i::before {
 }
 
 .with-us-cover h3 {
-    font-family: 'Roboto';
+    font-family: 'Roboto Condensed';
     font-style: normal;
     font-weight: bold;
     font-size: 24px;
@@ -1666,7 +1666,7 @@ li a i::before {
 }
 
 .with-us-cover p {
-    font-family: 'Roboto';
+    font-family: 'Roboto Condensed';
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -1685,7 +1685,7 @@ li a i::before {
     padding: 12px 20px;
     display: block;
     text-align: center;
-    font-family: 'Roboto';
+    font-family: 'Roboto Condensed';
     font-style: normal;
     font-weight: bold;
     font-size: 18px;
@@ -1907,7 +1907,7 @@ li a i::before {
     padding-top: 74px;
     padding-bottom: 36px;
 
-    font-family: 'Roboto';
+    font-family: 'Roboto Condensed';
     font-weight: 700;
     font-size: 64px;
     line-height: 16px;
@@ -1918,7 +1918,7 @@ li a i::before {
     margin: 0;
     /* padding-bottom: 64px; */
 
-    font-family: 'Roboto';
+    font-family: 'Roboto Condensed';
     font-weight: 400;
     font-size: 24px;
     line-height: normal;
@@ -1931,7 +1931,7 @@ li a i::before {
 }
 
 .breadcrumbs a {
-    font-family: 'Roboto';
+    font-family: 'Roboto Condensed';
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
@@ -1959,7 +1959,7 @@ li a i::before {
 }
 
 .breadcrumbs .active-breadcrumb {
-    font-family: 'Roboto';
+    font-family: 'Roboto Condensed';
     font-weight: 700;
     font-size: 12px;
     line-height: 16px;
@@ -2005,7 +2005,7 @@ li a i::before {
 }
 
 .content-container p {
-    font-family: 'Roboto';
+    font-family: 'Roboto Condensed';
     font-weight: 400;
     font-size: 16px;
     line-height: 26px;
@@ -2035,7 +2035,7 @@ li a i::before {
     justify-content: space-between;
     align-items: center;
 
-    font-family: 'Roboto';
+    font-family: 'Roboto Condensed';
     font-weight: 700;
     font-size: 16px;
     line-height: 20px;
@@ -2053,7 +2053,7 @@ li a i::before {
 }
 
 .main-accordion .panel-body {
-    font-family: 'Roboto';
+    font-family: 'Roboto Condensed';
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -2071,7 +2071,7 @@ li a i::before {
 
 .text-subheading {
     margin: 0;
-    font-family: 'Roboto';
+    font-family: 'Roboto Condensed';
     font-weight: 700;
     font-size: 23px;
     line-height: 16px;
@@ -2094,7 +2094,7 @@ li a i::before {
     padding: 22px 26px;
     text-align: center;
 
-    font-family: 'Roboto';
+    font-family: 'Roboto Condensed';
     font-weight: 700;
     font-size: 18px;
     line-height: 29px;
@@ -2110,7 +2110,7 @@ li a i::before {
 
 .assume p {
 
-    font-family: 'Roboto';
+    font-family: 'Roboto Condensed';
     font-weight: 700;
     font-size: 18px;
     line-height: 29px;
@@ -2142,7 +2142,7 @@ li a i::before {
 }
 
 .activity-header {
-    font-family: 'Roboto';
+    font-family: 'Roboto Condensed';
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
@@ -2155,7 +2155,7 @@ li a i::before {
 }
 
 .activity-text {
-    font-family: 'Roboto';
+    font-family: 'Roboto Condensed';
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -2220,7 +2220,7 @@ li a i::before {
 }
 
 .content-container .date-publication {
-    font-family: 'Roboto';
+    font-family: 'Roboto Condensed';
     font-weight: 500;
     font-size: 16px;
     line-height: 16px;
@@ -2234,7 +2234,7 @@ li a i::before {
 .content-container .heading-center {
     margin: 0;
 
-    font-family: 'Roboto';
+    font-family: 'Roboto Condensed';
     font-weight: 700;
     font-size: 42px;
     line-height: normal;
@@ -2263,7 +2263,7 @@ li a i::before {
 .tags-container .tag {
     padding: 4px 8px;
     border-radius: 12px;
-    font-family: 'Roboto';
+    font-family: 'Roboto Condensed';
     font-weight: 400;
     font-size: 12px;
     line-height: 16px;
@@ -2303,7 +2303,7 @@ li a i::before {
 }
 
 .share p {
-    font-family: 'Roboto';
+    font-family: 'Roboto Condensed';
     font-weight: 500;
     font-size: 16px;
     line-height: 16px;
@@ -2989,7 +2989,7 @@ table .db-row td {
     border-left: none !important;
     border-right: none !important;
 
-    font-family: 'Roboto';
+    font-family: 'Roboto Condensed';
     font-weight: 700;
     font-size: 14px;
     line-height: 16px !important;
@@ -3000,7 +3000,7 @@ table .db-row td {
 }
 
 .db-row td {
-    font-family: 'Roboto';
+    font-family: 'Roboto Condensed';
     font-weight: 400;
     font-size: 14px;
     line-height: 16px !important;
@@ -3074,7 +3074,7 @@ table .db-row td {
 }
 
 .reports th {
-    font-family: 'Roboto';
+    font-family: 'Roboto Condensed';
     font-style: normal;
     font-weight: 700;
     font-size: 14px;
@@ -3084,7 +3084,7 @@ table .db-row td {
 }
 
 .reports td {
-    font-family: 'Roboto';
+    font-family: 'Roboto Condensed';
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -3136,7 +3136,7 @@ table .db-row td {
 }
 
 .photo-gallery .video-21-9-rate-wrapepr {
-    max-height: 200px;
+  max-height: max-content;
     height: 100%;
     padding-bottom: initial;
 }
@@ -3297,9 +3297,6 @@ table .db-row td {
     align-items: center;
 }
 
-.grey-bg-section {
-    padding-top: 20px !important;
-}
 
 .carousel-card .environment {
     color: #24663B
