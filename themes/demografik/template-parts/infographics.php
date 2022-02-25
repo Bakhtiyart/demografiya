@@ -87,7 +87,6 @@ foreach( $postslistvideo as $post ){
 
 							setup_postdata($post);
 							
-							
 							?>
 					<?php 
 								if(has_post_thumbnail()){
@@ -98,6 +97,10 @@ foreach( $postslistvideo as $post ){
 								data-gallery="infograpics" data-toggle="lightbox" data-target=".bd-example-modal-lg">
 								<img src="<?php echo the_post_thumbnail_url() ?>" class="video-21-9-rate-images">
 							</a>
+							<a class="href_img" href="<?php echo get_the_post_thumbnail_url(); ?>"
+								data-gallery="infograpics" data-toggle="lightbox" data-target=".bd-example-modal-lg">
+								<?php the_title(); ?>
+							</a>
 						</div>
 					</div>
 					<?php
@@ -106,6 +109,7 @@ foreach( $postslistvideo as $post ){
 					<?php
 						}
 						wp_reset_postdata();
+						
 					?>
 				</div>
 			</div>
