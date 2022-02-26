@@ -1,21 +1,21 @@
 <?php
 global $post;
 $postslistinfografika = get_posts( [
-	'posts_per_page' => -1,
+	'posts_per_page' => 100,
 	'post_type' => 'infographics',
 	'infographic-cat' => 'infografika',
 	'order'=> 'ASC',
 	'orderby' => 'title',
 ] ); 
 $postslistrasm = get_posts( [
-	'posts_per_page' => -1,
+	'posts_per_page' => 100,
 	'post_type' => 'infographics',
 	'infographic-cat' => 'rasmlar',
 	'order'=> 'ASC',
 	'orderby' => 'title',
 ] ); 
 $postslistvideo = get_posts( [
-	'posts_per_page' => -1,
+	'posts_per_page' => 100,
 	'post_type' => 'infographics',
 	'infographic-cat' => 'video',
 	'order'=> 'ASC',
