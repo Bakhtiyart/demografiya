@@ -94,14 +94,15 @@ foreach( $postslistvideo as $post ){
 					<div>
 						<div class="video-21-9-rate-wrapepr img_url ">
 							<a class="href_img" href="<?php echo get_the_post_thumbnail_url(); ?>"
-								data-gallery="infograpics" data-toggle="lightbox" data-target=".bd-example-modal-lg">
+								data-gallery="infograpics" data-toggle="lightbox" data-title="<?php the_title(); ?>" data-target=".bd-example-modal-lg">
 								<img src="<?php echo the_post_thumbnail_url() ?>" class="video-21-9-rate-images">
 							</a>
-							<a class="href_img" href="<?php echo get_the_post_thumbnail_url(); ?>"
-								data-gallery="infograpics" data-toggle="lightbox" data-target=".bd-example-modal-lg">
-								<?php the_title(); ?>
-							</a>
+							
 						</div>
+						<a href="<?php echo get_the_post_thumbnail_url(); ?>"
+								data-gallery="infograpics" data-toggle="lightbox" data-title="<?php the_title(); ?>" data-target=".bd-example-modal-lg" style="color: #1d4969;">
+								<?php the_title(); ?>
+						</a>
 					</div>
 					<?php
 								}

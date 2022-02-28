@@ -107,11 +107,7 @@ img {
     margin: 0;
 }
 
-.search {
-    position: relative;
-    width: 300px;
 
-}
 
 .search::before {
     content: url('/img/site/searchicon.png');
@@ -3136,7 +3132,7 @@ table .db-row td {
 }
 
 .photo-gallery .video-21-9-rate-wrapepr {
-  max-height: max-content;
+    max-height: max-content;
     height: 100%;
     padding-bottom: initial;
 }
