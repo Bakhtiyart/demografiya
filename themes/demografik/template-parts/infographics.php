@@ -1,22 +1,25 @@
+
 <?php
-global $post;
 $postslistinfografika = get_posts( [
+	'posts_per_page' => 100,
 	'post_type' => 'infographics',
 	'infographic-cat' => 'infografika',
-	'order'=> 'ASC',
-	'orderby' => 'title',
+	'order'=> 'DESC',
+	'orderby' => 'date',
 ] ); 
 $postslistrasm = get_posts( [
+	'posts_per_page' => 100,
 	'post_type' => 'infographics',
 	'infographic-cat' => 'rasmlar',
-	'order'=> 'ASC',
-	'orderby' => 'title',
+	'order'=> 'DESC',
+	'orderby' => 'date',
 ] ); 
 $postslistvideo = get_posts( [
+	'posts_per_page' => 100,
 	'post_type' => 'infographics',
 	'infographic-cat' => 'video',
-	'order'=> 'ASC',
-	'orderby' => 'title',
+	'order'=> 'DESC',
+	'orderby' => 'date',
 ] ); 
 $countinfografika = 0;
 foreach( $postslistinfografika as $post ){
@@ -77,83 +80,50 @@ foreach( $postslistvideo as $post ){
 				</div>
 				<div class="custom-grid-1-4 photo-gallery">
 					<?php 
-					$postslistinfografika = get_posts( [
-						'post_type' => 'infographics',
-						'infographic-cat' => 'infografika',
-						'order'=> 'ASC',
-						'orderby' => 'title',
-					] );
-					foreach( $postslistinfografika as $post ){
-
-							setup_postdata($post);
-							
+					foreach( $postslistinfografika as $post ):
+						setup_postdata($post);
+						if(has_post_thumbnail()):
 							?>
-					<?php 
-								if(has_post_thumbnail()){
-							?>
-					<div>
-						<div class="video-21-9-rate-wrapepr img_url ">
-							<a class="href_img" href="<?php echo get_the_post_thumbnail_url(); ?>"
-								data-gallery="infograpics" data-toggle="lightbox" data-title="<?php the_title(); ?>" data-target=".bd-example-modal-lg">
-								<img src="<?php echo the_post_thumbnail_url() ?>" class="video-21-9-rate-images">
-							</a>
-							
-						</div>
-						<a href="<?php echo get_the_post_thumbnail_url(); ?>"
-								data-gallery="infograpics" data-toggle="lightbox" data-title="<?php the_title(); ?>" data-target=".bd-example-modal-lg" style="color: #1d4969;">
-								<?php the_title(); ?>
-						</a>
-					</div>
-					<?php
-								}
-							?>
-					<?php
-						}
-						wp_reset_postdata();
-						
+							<div>
+								<div class="video-21-9-rate-wrapepr img_url ">
+									<a class="href_img" href="<?php echo get_the_post_thumbnail_url(); ?>"
+										data-gallery="infograpics" data-toggle="lightbox" data-target=".bd-example-modal-lg">
+										<img src="<?php echo the_post_thumbnail_url() ?>" class="video-21-9-rate-images">
+										<?php the_title(); ?>
+									</a>
+								</div>
+							</div>
+						<?php
+						endif;
+					endforeach;
+					wp_reset_postdata();
 					?>
 				</div>
 			</div>
 			<div>
 				<div class="header-with-lines">
 					<h2 class="common-heading underline-text">Rasmlar</h2>
-
 					<hr>
 				</div>
 				<div class="custom-grid-1-4 photo-gallery">
-
-
-					<?php 
-					$postslistrasm = get_posts( [
-						'post_type' => 'infographics',
-						'infographic-cat' => 'rasmlar',
-						'order'=> 'ASC',
-						'orderby' => 'title',
-					] ); 
-					foreach( $postslistrasm as $post ){
-
-							setup_postdata($post);
-							
-							
+					<?php  
+					foreach( $postslistrasm as $post ):
+						setup_postdata($post);
+						if(has_post_thumbnail()):
 							?>
-					<?php 
-								if(has_post_thumbnail()){
-							?>
-					<div>
-						<div class="video-21-9-rate-wrapepr img_url ">
-							<a class="href_img" href="<?php echo get_the_post_thumbnail_url(); ?>" data-gallery="images"
-								data-toggle="lightbox" data-target=".bd-example-modal-lg">
-								<img src="<?php echo the_post_thumbnail_url() ?>" class="video-21-9-rate-images">
-
-							</a>
-						</div>
-					</div>
-					<?php
-								}
-							?>
-					<?php
-						}
-						wp_reset_postdata();
+							<div>
+								<div class="video-21-9-rate-wrapepr img_url ">
+									<a class="href_img" href="<?php echo get_the_post_thumbnail_url(); ?>" data-gallery="images"
+										data-toggle="lightbox" data-target=".bd-example-modal-lg">
+										<img src="<?php echo the_post_thumbnail_url() ?>" class="video-21-9-rate-images">
+										<?php the_title(); ?>
+									</a>
+								</div>
+							</div>
+							<?php
+						endif;
+					endforeach;
+					wp_reset_postdata();
 					?>
 				</div>
 
@@ -161,66 +131,41 @@ foreach( $postslistvideo as $post ){
 			<div>
 				<div class="header-with-lines">
 					<h2 class="common-heading underline-text">Video</h2>
-
 					<hr>
 				</div>
 				<div class="custom-grid-1-4 photo-gallery">
-
-
 					<?php 
-					$postslistvideo = get_posts( [
-						'post_type' => 'infographics',
-						'infographic-cat' => 'video',
-						'order'=> 'ASC',
-						'orderby' => 'title',
-					] ); 
-					foreach( $postslistvideo as $post ){
-
-							setup_postdata($post);
-							
-							
+					foreach( $postslistvideo as $post ):
+						setup_postdata($post);
+						if(has_post_thumbnail()):
 							?>
-					<?php 
-								if(has_post_thumbnail()){
-							?>
-					<div>
-						<div class="video-21-9-rate-wrapepr img_url ">
-							<a class="href_img" href="<?php the_field('video_link'); ?>" data-gallery="videos"
-								data-toggle="lightbox" data-target="<?php the_ID() ?>">
-								<img src="<?php echo the_post_thumbnail_url() ?>" class="video-21-9-rate-images">
-
-							</a>
-						</div>
-					</div>
-					<div class="modal fade" id="<?php the_ID() ?>" tabindex="-1" role="dialog" aria-hidden="true">
-						<div class="modal-dialog" role="document">
-							<div class="modal-content">
-
-
-								<div class="modal-body">
-									<div class="embed-responsive embed-responsive-16by9">
-										<?php the_field('video_link'); ?>
-									</div>
-
-
+							<div>
+								<div class="video-21-9-rate-wrapepr img_url ">
+									<a class="href_img" href="<?php the_field('video_link'); ?>" data-gallery="videos"
+										data-toggle="lightbox" data-target="<?php the_ID() ?>">
+										<img src="<?php echo the_post_thumbnail_url() ?>" class="video-21-9-rate-images">
+										<?php the_title(); ?>
+									</a>
 								</div>
-
 							</div>
-						</div>
-					</div>
-
-					<?php
-								}
-							?>
-					<?php
-						}
-						wp_reset_postdata();
+							<div class="modal fade" id="<?php the_ID() ?>" tabindex="-1" role="dialog" aria-hidden="true">
+								<div class="modal-dialog" role="document">
+									<div class="modal-content">
+										<div class="modal-body">
+											<div class="embed-responsive embed-responsive-16by9">
+												<?php the_field('video_link'); ?>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<?php
+						endif;
+					endforeach;
+					wp_reset_postdata();
 					?>
 				</div>
 			</div>
 		</div>
 	</div>
-
-
-	
 </section>
